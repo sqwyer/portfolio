@@ -32,11 +32,11 @@
 	margin-top: auto;
 }
 
-.swiper-slide:not(.swiper-slide-active) {
+.swiper-slide:not(.swiper-slide-active) > div {
 	opacity: 0.5;
 }
 
-.swiper-slide:not(.swiper-slide-active):hover {
+.swiper-slide:not(.swiper-slide-active) > div:hover {
 	opacity: 0.6;
 }
 
