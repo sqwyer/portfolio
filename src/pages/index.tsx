@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 					<h1 className="text-white text-4xl font-bold">
 						I&apos;m Sawyer
 					</h1>
-					<p className="text-zinc-700 text-xl font-medium">
+					<p className="text-zinc-600 text-xl font-medium">
 						a student & web developer.
 					</p>
 					<div className="flex flex-row gap-4 text-white">
