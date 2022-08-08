@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 
 import "swiper/css";
 
@@ -32,12 +33,15 @@ export default function Slider() {
 				loopedSlides={3}
 				centeredSlides={true}
 				loopFillGroupWithBlank={true}
+				autoplay={{ delay: 3000, disableOnInteraction: true }}
 				className="mySwiper"
+				modules={[Autoplay]}
 			>
-				<SwiperSlide
-					onClick={() => window.open("/projects/epm", "_self")}
-				>
-					<div className="flex flex-col cursor-pointer transition duration-75">
+				<SwiperSlide>
+					<div
+						className="flex flex-col cursor-pointer transition duration-75"
+						onClick={() => window.open("/projects/epm", "_self")}
+					>
 						<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
 							<div className="p-1 bg-zinc-700 rounded-full"></div>
 							<div className="p-1 bg-zinc-700 rounded-full"></div>
