@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 				<div className="flex-1 hidden lg:block">
-					<div className="relative top-1/6 h-md:top-1/3 h-lg:top-1/5 h-xl:top-2/3">
+					<div className="relative h-full">
 						<Slider />
 					</div>
 				</div>
