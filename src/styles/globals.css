@@ -9,3 +9,22 @@
 		font-family: "Inter", system-ui, sans-serif;
 	}
 }
+
+.swiper {
+	overflow: visible !important;
+	transform: translateY(40%);
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+	opacity: 0.5;
+}
+
+.swiper-slide:not(.swiper-slide-active):hover {
+	opacity: 0.6;
+}
+
+.swiper-slide.swiper-slide-active {
+	transform: scale(1.2) translateY(-12.4%) !important;
+	z-index: 2;
+	opacity: 1;
+}

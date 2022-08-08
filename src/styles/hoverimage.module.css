@@ -1,0 +1,7 @@
+.hoverimage div {
+	display: none;
+}
+
+.hoverimage:hover div {
+	display: flex;
+}

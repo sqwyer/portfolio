@@ -1,61 +1,96 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+
 import eastverse from "../../public/eastverse.png";
 import na from "../../public/na.png";
 import Image from "next/image";
 
-function open(page: string) {
-	window.open("/projects/" + page, "_self");
+import styles from "../styles/hoverimage.module.css";
+
+function HoverImage({ alt, children }: { alt: string; children: any }) {
+	return (
+		<div className={styles.hoverimage + " relative"}>
+			{children}
+			<div className="absolute top-0 left-0 bottom-0 right-0 opacity-0 bg-black/10 text-white hover:opacity-100 z-50  duration-100">
+				<h1 className="drop-shadow-lg shadow-black/50 text-xl font-bold m-auto">
+					{alt}
+				</h1>
+			</div>
+		</div>
+	);
 }
 
 export default function Slider() {
 	return (
 		<>
-			<div className="relative w-100">
-				<div
-					className="flex flex-col w-xl absolute right-1/2 mt-10 opacity-50 cursor-pointer hover:opacity-60 transition duration-75"
-					style={{ transform: "translate(-25%)" }}
+			<Swiper
+				slidesPerView={3}
+				spaceBetween={0}
+				slidesPerGroup={1}
+				loop={true}
+				loopedSlides={3}
+				centeredSlides={true}
+				loopFillGroupWithBlank={true}
+				className="mySwiper mt-auto flex"
+			>
+				<SwiperSlide
+					onClick={() => window.open("/projects/epm", "_self")}
 				>
-					<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
+					<div className="flex flex-col cursor-pointer transition duration-75">
+						<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+						</div>
+						<div className="relative">
+							<HoverImage alt="Eastverse">
+								<Image
+									src={eastverse}
+									alt="thumbnail"
+									layout="responsive"
+								/>
+							</HoverImage>
+						</div>
 					</div>
-					<div>
-						<Image src={na} alt="thumbnail" layout="responsive" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<div className="flex flex-col cursor-pointer transition duration-75">
+						<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+						</div>
+						<div className="relative">
+							<HoverImage alt="Coming Soon">
+								<Image
+									src={na}
+									alt="thumbnail"
+									layout="responsive"
+								/>
+							</HoverImage>
+						</div>
 					</div>
-				</div>
-
-				<div
-					className="flex flex-col w-xl absolute left-1/2 mt-10 opacity-50 cursor-pointer hover:opacity-60 transition duration-75"
-					style={{ transform: "translate(25%)" }}
-				>
-					<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div className="flex flex-col cursor-pointer transition duration-75">
+						<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+							<div className="p-1 bg-zinc-700 rounded-full"></div>
+						</div>
+						<div className="relative">
+							<HoverImage alt="Coming Soon">
+								<Image
+									src={na}
+									alt="thumbnail"
+									layout="responsive"
+								/>
+							</HoverImage>
+						</div>
 					</div>
-					<div>
-						<Image src={na} alt="thumbnail" layout="responsive" />
-					</div>
-				</div>
-
-				<div
-					className="flex flex-col w-xl absolute left-1/2 cursor-pointer"
-					style={{ transform: "translate(-50%)" }}
-				>
-					<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-						<div className="p-1 bg-zinc-700 rounded-full"></div>
-					</div>
-					<div onClick={() => open("epm")}>
-						<Image
-							src={eastverse}
-							alt="thumbnail"
-							layout="responsive"
-						/>
-					</div>
-				</div>
-			</div>
+				</SwiperSlide>
+			</Swiper>
 		</>
 	);
 }

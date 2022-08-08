@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { GitHub, Linkedin, Mail } from "react-feather";
+import { ChevronRight, GitHub, Linkedin, Mail } from "react-feather";
 import Slider from "../components/Slider";
 
 const Home: NextPage = () => {
@@ -14,6 +14,9 @@ const Home: NextPage = () => {
 
 			<div className="w-screen h-screen flex flex-col bg-zinc-900 font-inter overflow-hidden">
 				<div className="flex flex-col justify-center items-center p-4 gap-2 flex-1">
+					<div className="rounded-full bg-zinc-800/40 px-8 py-2 flex flex-row gap-2 justify-center font-medium text-zinc-500 cursor-pointer hover:bg-zinc-800/50 transition duration-75">
+						Skills <ChevronRight />
+					</div>
 					<h1 className="text-white text-4xl font-bold">
 						I&apos;m Sawyer
 					</h1>
@@ -44,7 +47,7 @@ const Home: NextPage = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex-1">
+				<div className="flex-1 justify-start">
 					<Slider />
 				</div>
 			</div>
