@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 			<div className="w-screen h-screen flex flex-col bg-zinc-900 font-inter overflow-hidden">
 				<div className="flex flex-col justify-center items-center p-4 gap-2 flex-1">
 					<h1 className="text-white text-4xl font-bold">
-						I'm Sawyer
+						I&apos;m Sawyer
 					</h1>
 					<p className="text-zinc-700 text-xl font-medium">
 						a student & web developer.
