@@ -14,7 +14,10 @@ const Home: NextPage = () => {
 
 			<div className="w-screen h-screen flex flex-col bg-zinc-900 font-inter overflow-hidden">
 				<div className="flex flex-col justify-center items-center p-4 gap-2 flex-1">
-					<div className="rounded-full bg-zinc-800/40 px-8 py-2 flex flex-row gap-2 justify-center font-medium text-zinc-500 cursor-pointer hover:bg-zinc-800/50 transition duration-75">
+					<div
+						className="rounded-full bg-zinc-800/40 px-8 py-2 flex-row gap-2 justify-center font-medium text-zinc-500 cursor-pointer hover:bg-zinc-800/50 transition duration-75 hidden lg:flex"
+						onClick={() => window.open("/skills", "_self")}
+					>
 						Skills <ChevronRight />
 					</div>
 					<h1 className="text-white text-4xl font-bold">
@@ -46,9 +49,23 @@ const Home: NextPage = () => {
 							<Linkedin />
 						</div>
 					</div>
+					<div
+						className="rounded-full bg-zinc-800/40 px-12 py-2 flex-row gap-2 justify-center font-medium text-zinc-500 cursor-pointer hover:bg-zinc-800/50 transition duration-75 flex lg:hidden mt-4"
+						onClick={() => window.open("/projects", "_self")}
+					>
+						My Work <ChevronRight />
+					</div>
+					<div
+						className="rounded-full bg-zinc-800/40 px-12 py-2 flex-row gap-2 justify-center font-medium text-zinc-500 cursor-pointer hover:bg-zinc-800/50 transition duration-75 flex lg:hidden mt-2"
+						onClick={() => window.open("/skills", "_self")}
+					>
+						My Skills <ChevronRight />
+					</div>
 				</div>
-				<div className="flex-1 justify-start">
-					<Slider />
+				<div className="flex-1 hidden lg:block">
+					<div className="relative top-1/6 h-md:top-1/3 h-lg:top-1/5 h-xl:top-2/3">
+						<Slider />
+					</div>
 				</div>
 			</div>
 		</>

@@ -32,7 +32,7 @@ export default function Slider() {
 				loopedSlides={3}
 				centeredSlides={true}
 				loopFillGroupWithBlank={true}
-				className="mySwiper mt-auto flex"
+				className="mySwiper"
 			>
 				<SwiperSlide
 					onClick={() => window.open("/projects/epm", "_self")}
