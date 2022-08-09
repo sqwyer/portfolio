@@ -12,7 +12,7 @@ const EPM: NextPage = () => {
 			</Head>
 			<div className="w-screen min-h-screen bg-zinc-900 text-white overflow-x-hidden">
 				<Nav />
-				<div className="px-8 md:px-44 lg:px-52 xl:px-96">
+				<div className="px-8 md:px-44 lg:px-52 xl:px-96 pb-12">
 					<h1 className="text-7xl font-black">My Skills</h1>
 					<hr className="border-zinc-800 border-2 my-6" />
 

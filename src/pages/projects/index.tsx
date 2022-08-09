@@ -25,7 +25,7 @@ const EPM: NextPage = () => {
 				<meta name="description" content="Student & web developer." />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="w-screen min-h-screen bg-zinc-900 text-white overflow-x-hidden">
+			<div className="w-screen min-h-screen bg-zinc-900 text-white overflow-x-hidden pb-12">
 				<Nav />
 				<div className="px-8 md:px-44 lg:px-52 xl:px-96">
 					<h1 className="text-7xl font-black">My Work</h1>
