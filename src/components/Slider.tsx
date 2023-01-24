@@ -3,7 +3,7 @@ import { Autoplay } from "swiper";
 
 import "swiper/css";
 
-import eastverse from "../../public/eastverse.png";
+import leaveamessage from "../../public/leaveamessage.png";
 import na from "../../public/na.png";
 import Image from "next/image";
 
@@ -40,7 +40,9 @@ export default function Slider() {
 				<SwiperSlide>
 					<div
 						className="flex flex-col cursor-pointer transition duration-75"
-						onClick={() => window.open("/projects/epm", "_self")}
+						onClick={() =>
+							window.open("/projects/leaveamessage", "_self")
+						}
 					>
 						<div className="p-3 rounded-t-lg bg-zinc-800 flex flex-row gap-1">
 							<div className="p-1 bg-zinc-700 rounded-full"></div>
@@ -48,9 +50,9 @@ export default function Slider() {
 							<div className="p-1 bg-zinc-700 rounded-full"></div>
 						</div>
 						<div className="relative">
-							<HoverImage alt="Eastverse">
+							<HoverImage alt="Leave-a-message">
 								<Image
-									src={eastverse}
+									src={leaveamessage}
 									alt="thumbnail"
 									layout="responsive"
 								/>

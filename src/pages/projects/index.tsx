@@ -3,6 +3,7 @@ import Head from "next/head";
 import Nav from "../../components/Nav";
 import Image from "next/image";
 import eastverse from "../../../public/eastverse.png";
+import LookingFor from "../../components/LookingFor";
 
 function Project({ image, alt }: { image: any; alt: string }) {
 	return (
@@ -25,9 +26,10 @@ const EPM: NextPage = () => {
 				<meta name="description" content="Student & web developer." />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="w-screen min-h-screen bg-zinc-900 text-white overflow-x-hidden pb-12">
+			<div className="min-h-screen bg-zinc-900 text-white overflow-x-hidden pb-12">
+				<LookingFor />
 				<Nav />
-				<div className="px-8 md:px-44 lg:px-52 xl:px-96">
+				<div className="px-8 sm:px-22 md:px-36 lg:px-52 xl:px-96">
 					<h1 className="text-7xl font-black">My Work</h1>
 					<hr className="border-zinc-800 border-2 my-6" />
 

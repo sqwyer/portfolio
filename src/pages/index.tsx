@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { ChevronRight, GitHub, Linkedin, Mail } from "react-feather";
+import LookingFor from "../components/LookingFor";
 import Slider from "../components/Slider";
 
 const Home: NextPage = () => {
@@ -12,7 +13,8 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="w-screen h-screen flex flex-col bg-zinc-900 font-inter overflow-hidden">
+			<div className="h-screen flex flex-col bg-zinc-900 font-inter overflow-hidden">
+				<LookingFor />
 				<div className="flex flex-col justify-center items-center p-4 gap-2 flex-1">
 					<div
 						className="rounded-full bg-zinc-800/40 px-8 py-2 flex-row gap-2 justify-center font-medium text-zinc-500 cursor-pointer hover:bg-zinc-800/50 transition duration-75 hidden lg:flex"

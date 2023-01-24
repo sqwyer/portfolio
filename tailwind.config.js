@@ -26,6 +26,9 @@ module.exports = {
 				"h-lg": { raw: "(min-height: 1000px)" },
 				"h-xl": { raw: "(min-height: 1400px)" },
 			},
+			backgroundImage: {
+				eastverse: "url('/_eastverse.png')",
+			},
 		},
 	},
 	plugins: [],
