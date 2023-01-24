@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Nav from "../../components/Nav";
 import Image from "next/image";
-import eastverse from "../../../public/eastverse.png";
+import leaveamessage from "../../../public/leaveamessage.png";
 import LookingFor from "../../components/LookingFor";
 
 function Project({ image, alt }: { image: any; alt: string }) {
@@ -34,7 +34,7 @@ const EPM: NextPage = () => {
 					<hr className="border-zinc-800 border-2 my-6" />
 
 					<div className="flex flex-col gap-6">
-						<Project image={eastverse} alt="Eastverse" />
+						<Project image={leaveamessage} alt="Leave-a-message" />
 					</div>
 				</div>
 			</div>
