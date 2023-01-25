@@ -6,7 +6,7 @@ import Image from "next/image";
 import LookingFor from "../../components/LookingFor";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
-const EPM: NextPage = () => {
+const LeaveAMessage: NextPage = () => {
 	return (
 		<>
 			<Head>
@@ -166,4 +166,4 @@ const EPM: NextPage = () => {
 	);
 };
 
-export default EPM;
+export default LeaveAMessage;
